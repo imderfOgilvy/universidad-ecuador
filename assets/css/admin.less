@@ -1,0 +1,458 @@
+/** GLOBAL **/
+
+// VARS
+@siteurl : '';
+
+// Colors
+@black: #000000;
+@white: #ffffff;
+@mustard: #f4ad11;
+@mustard-dark: #d09616;
+@yellow: #ffec00;
+@red : #e04839;
+@grey-dark: #4a4a4a;
+@grey-light: #eeeeee;
+@grey: #d1d1d1;
+@blue: #1f77be;
+@blue-light: #1f77be;
+
+
+// Backgrounds
+.bg-mustard{
+  background-color: @mustard !important;
+}
+.bg-red{
+  background-color: @red !important;
+}
+.bg-grey-dark{
+  background-color: @grey-dark !important;
+}
+.bg-grey-light{
+  background-color: @grey-light !important;
+}
+.bg-grey{
+  background-color: @grey !important;
+}
+.bg-white{
+  background-color: @white !important;
+}
+.bg-blue{
+  background-color: @blue-light !important;
+}
+// Display
+.d-flex{
+  display: flex !important;
+}
+.d-block{
+  display: block !important;
+}
+.hidden{
+  display:none !important;
+}
+.flex-column{
+  flex-direction: column !important;
+}
+.flex-row{
+  flex-direction: row !important;
+}
+
+// Position
+.absolute-container {
+  position: absolute;
+}
+
+// Font Sizes
+.font-sizes(100);
+
+.font-sizes(@n, @i: 1) when (@i =< @n) {
+  .font-size-@{i} {
+    font-size: (@i * 1px) !important;
+  }
+  .font-sizes(@n, (@i + 1));
+}
+
+// Margins
+.mt-0{
+  margin-top: 0px !important;
+}
+.mb-0{
+  margin-bottom: 0px !important;
+}
+.m-0{
+  margin: 0px !important;
+}
+.m-auto{
+  margin:auto !important;
+}
+.my-auto{
+  margin-top:auto !important;
+  margin-bottom:auto !important;
+}
+.mx-auto{
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+
+// Paddings
+.pt-0{
+  padding-top: 0px !important;
+}
+.pb-0{
+  padding-bottom: 0px !important;
+}
+.p-0{
+  padding: 0px !important;
+}
+.px-0{
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.py-0{
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+.p-0{
+  padding: 0px !important;
+}
+
+// Paddings
+.padding-sizes(12);
+
+.padding-sizes(@n, @i: 1) when (@i =< @n) {
+  .p-@{i} {
+    padding: (@i * 1em / 1) !important;
+  }
+  .padding-sizes(@n, (@i + 1));
+}
+
+// Paddings Top
+.padding-top-sizes(12);
+
+.padding-top-sizes(@n, @i: 1) when (@i =< @n) {
+  .pt-@{i} {
+    padding-top: (@i * 0.5em / 1) !important;
+  }
+  .padding-top-sizes(@n, (@i + 1));
+}
+
+// Paddings Bottom
+.padding-bottom-sizes(12);
+
+.padding-bottom-sizes(@n, @i: 1) when (@i =< @n) {
+  .pb-@{i} {
+    padding-bottom: (@i * 0.5em / 1) !important;
+  }
+  .padding-bottom-sizes(@n, (@i + 1));
+}
+
+// Paddings X
+.padding-x-sizes(12);
+
+.padding-x-sizes(@n, @i: 1) when (@i =< @n) {
+  .px-@{i} {
+    padding-left: (@i * 0.5em / 1) !important;
+    padding-right: (@i * 0.5em / 1) !important;
+  }
+  .padding-x-sizes(@n, (@i + 1));
+}
+
+// Paddings Y
+.padding-y-sizes(12);
+
+.padding-y-sizes(@n, @i: 1) when (@i =< @n) {
+  .py-@{i} {
+    padding-top: (@i * 0.5em / 1) !important;
+    padding-bottom: (@i * 0.5em / 1) !important;
+  }
+  .padding-y-sizes(@n, (@i + 1));
+}
+
+
+
+
+// Margins
+.margin-sizes(12);
+
+.margin-sizes(@n, @i: 1) when (@i =< @n) {
+  .m-@{i} {
+    margin: (@i * 1em / 1) !important;
+  }
+  .margin-sizes(@n, (@i + 1));
+}
+
+// margins Top
+.margin-top-sizes(12);
+
+.margin-top-sizes(@n, @i: 1) when (@i =< @n) {
+  .mt-@{i} {
+    margin-top: (@i * 0.5em / 1) !important;
+  }
+  .margin-top-sizes(@n, (@i + 1));
+}
+
+// margins Bottom
+.margin-bottom-sizes(12);
+
+.margin-bottom-sizes(@n, @i: 1) when (@i =< @n) {
+  .mb-@{i} {
+    margin-bottom: (@i * 0.5em / 1) !important;
+  }
+  .margin-bottom-sizes(@n, (@i + 1));
+}
+
+// margins X
+.margin-x-sizes(12);
+
+.margin-x-sizes(@n, @i: 1) when (@i =< @n) {
+  .mx-@{i} {
+    margin-left: (@i * 0.5em / 1) !important;
+    margin-right: (@i * 0.5em / 1) !important;
+  }
+  .margin-x-sizes(@n, (@i + 1));
+}
+
+// margins Y
+.margin-y-sizes(12);
+
+.margin-y-sizes(@n, @i: 1) when (@i =< @n) {
+  .my-@{i} {
+    margin-top: (@i * 0.5em / 1) !important;
+    margin-bottom: (@i * 0.5em / 1) !important;
+  }
+  .margin-y-sizes(@n, (@i + 1));
+}
+
+
+// Height Percentage
+@heights : 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100;
+
+.hight-sizes(@heights; @index) when (@index > 0){
+  .hight-sizes(@heights; (@index - 1));
+  
+  @size : extract(@heights, @index);
+
+  .h-@{size}{
+    min-height: (@size * 1%) !important;
+  }
+}
+
+.hight-sizes(@heights, length(@heights));
+
+// Width Percentage
+@widths : 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100;
+
+.width-sizes(@widths; @index) when (@index > 0){
+  .width-sizes(@widths; (@index - 1));
+  
+  @size : extract(@widths, @index);
+
+  .w-@{size}{
+    min-width: (@size * 1%) !important;
+  }
+}
+
+.width-sizes(@widths, length(@widths));
+
+
+// Text Color
+.text-dark{
+  color: @black !important;
+}
+.text-light{
+  color: @white !important;
+}
+.text-secondary{
+  color: @mustard !important;
+}
+.text-red{
+  color: @red !important;
+}
+.text-blue{
+  color: @blue !important;
+}
+.text-blue-light{
+  color: @blue-light !important;
+}
+
+// Text Align
+.text-center{
+  text-align: center !important;
+}
+.text-right{
+  text-align: right !important;
+}
+.text-left{
+  text-align: left !important;
+}
+.text-justify{
+  text-align: justify !important;
+}
+
+// Text Weight
+.text-thin{
+  font-weight: 200;
+}
+.text-normal{
+  font-weight: 400;
+}
+.text-bold{
+  font-weight: 600;
+}
+.text-bolder{
+  font-weight: 900;
+}
+
+
+/** GENERAL **/
+body {
+    background: #eeeeee;
+}
+input {
+    width: 100%;
+    font-size: 16px;
+    padding: 8px;
+    border: 1px solid #9a9a9a;
+    border-radius: 6px;
+}
+a{
+    margin-top:35px;
+    font-size: 16px;
+    padding: 8px;
+    background:#e34;
+    color:#fff;
+    font-weight:600;
+    border-radius: 6px;
+}
+.universidad-logo{
+    max-width:140px;
+}
+div#header {
+    background: #336;
+    margin:0px;
+}
+div#nav-menu {
+    position: fixed;
+    z-index: 20;
+    background: #eee;
+    width: 100%;
+}
+#mobile-menu i{
+    font-size:1.5em;
+    
+}
+
+/** STATS **/
+.stats h2 {
+    border-radius: 15px 15px 0px 0px;
+    background: #3375ee;
+    padding: 15px;
+    color: #fff;
+    line-height: 21px;
+    font-size: 18px;
+    text-align: center;
+}
+#dashboard-page .stats {
+    border-radius: 15px;
+    background: #fff;
+    padding: 0px;
+    margin-bottom: 30px;
+}
+.stats .stat {
+    padding: 30px;
+    font-size: 3em;
+    text-align: center;
+    color  :#676767;
+}
+.stat.rating .header{
+  line-height: 0.6em;
+}
+.stat.rating .stats{
+  font-size:12px;
+  margin:0px;
+}
+.stat.rating{
+  padding:12px;
+  margin:12px 25px;
+}
+
+/** PUNTAJE **/
+.cuadro-posiciones{
+  display:flex;
+  position:relative;
+  flex-direction:column !important;
+  margin-bottom:30px !important;
+  border:1px solid #eee;
+}
+.cuadro-posiciones > .posicion-stat{
+  min-width:100%;
+  text-align:center !important;
+  display:block !important;
+  border-radius:0px;
+  border-bottom:1px solid #eee;
+  font-size:12px;
+}
+#dashboard-page .cuadro-posiciones > .stat-lugar{
+  background:#336;
+  color:#fff;
+
+}
+.posicion-stat {
+    padding: 2.3px !important;
+}
+#dashboard-page .cuadro-posiciones > .stat-puntaje{
+  font-size:16px;
+}    
+#dashboard-page .cuadro-posiciones > .stat-tiempo{
+  font-size:16px;
+}
+.stats h4 {
+    background: #EEB;
+    padding: 6px 24px;
+    text-align: center;
+    margin-top: -14px;
+}
+#calificaciones .stats{
+  line-height:1.2em !important;
+}
+
+
+@media (min-width:768.1px){
+.stats h2{
+  margin-bottom:0px !important;
+}
+.stats h4{
+  min-height:60px;
+  padding:0px 15px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.wrapper-stats > .column{
+  /*border:1px solid red;*/
+  padding:0px !important;
+  margin:0px !important;
+}
+.wrapper-stats > .column:nth-child(n+1){
+  border:1px solid #fff;
+}
+.wrapper-stats{
+  max-width:100%;
+  margin:0px auto !important;
+  overflow:hidden !important;
+  border-radius:0px 0px 15px 15px;
+}
+.wrapper-stats > .column .stat{
+  padding:20px 0px !important;  
+  font-size:24px;
+}
+.wrapper-stats > .column h4{
+  margin-top:0px !important;
+}
+}
+
+@media (max-width:768px){
+#dashboard-page .column.stats {
+    padding: 0px !important;
+    margin-bottom: 30px !important;
+}    
+}
